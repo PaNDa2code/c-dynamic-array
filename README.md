@@ -1,3 +1,19 @@
+## Title: Generic C Dynamic Array with Mutex for Thread Safety**
+
+### Description:
+
+This repository provides a C implementation of a generic dynamic array with built-in thread safety using mutexes. The dynamic array is designed to handle various data types, allowing for flexible and concurrent use in multithreaded applications.
+
+### Features:
+
+- **Generic Type Support:** Implemented using macros to handle different data types in a type-safe manner.
+- **Dynamic Resizing:** The array automatically grows as needed, accommodating more elements efficiently.
+- **Thread Safety:** Utilizes mutexes to ensure safe concurrent access and modifications.
+- **Easy Integration:** Provides simple functions for creating, modifying, and managing dynamic arrays.
+
+**Usage Example:**
+
+```c 
 #include "dynamic_array.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +26,6 @@ void *thread_function(void *arg) {
   for (int i = 0; i < 10; ++i) {
     dynamic_array_push(array, i);
   }
-
   return NULL;
 }
 
@@ -42,3 +57,5 @@ int main() {
   free_dynamic_array(array);
   return 0;
 }
+```
+

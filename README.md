@@ -1,4 +1,4 @@
-## Title: Generic C Dynamic Array with Mutex for Thread Safety**
+## Generic C Dynamic Array with Mutex for Thread Safety
 
 ### Description:
 
